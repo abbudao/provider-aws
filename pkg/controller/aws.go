@@ -99,6 +99,7 @@ import (
 	glueDatabase "github.com/crossplane/provider-aws/pkg/controller/glue/database"
 	gluejob "github.com/crossplane/provider-aws/pkg/controller/glue/job"
 	gluesecurityconfiguration "github.com/crossplane/provider-aws/pkg/controller/glue/securityconfiguration"
+	gluetrigger "github.com/crossplane/provider-aws/pkg/controller/glue/trigger"
 	"github.com/crossplane/provider-aws/pkg/controller/iam/accesskey"
 	"github.com/crossplane/provider-aws/pkg/controller/iam/group"
 	"github.com/crossplane/provider-aws/pkg/controller/iam/grouppolicyattachment"
@@ -255,6 +256,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter, poll ti
 		glueDatabase.SetupDatabase,
 		gluecrawler.SetupCrawler,
 		glueclassifier.SetupClassifier,
+        gluetrigger.SetupTrigger,
 		mqbroker.SetupBroker,
 		mquser.SetupUser,
 		cwloggroup.SetupLogGroup,
