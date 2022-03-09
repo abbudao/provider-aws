@@ -196,6 +196,9 @@ type CustomClassifierParameters struct {
 	CustomJSONClassifier *CustomCreateJSONClassifierRequest `json:"jsonClassifier,omitempty"`
 }
 
+// CustomTriggerParameters contains the additional fields for TriggerParameters
+type CustomTriggerParameters struct{}
+
 // CustomCreateGrokClassifierRequest contains the fields for CreateGrokClassifierRequest.
 type CustomCreateGrokClassifierRequest struct {
 	// An identifier of the data format that the classifier matches, such as Twitter,
